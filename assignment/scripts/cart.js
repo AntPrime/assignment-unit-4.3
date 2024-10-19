@@ -5,14 +5,38 @@ let basket = [];
 console.log(basket);
 
 function addItem(item){
-if (basket.length < 3) {basket.push(item);
-return true + item;
+basket.push(item);
+return true;
 }
+
+console.log(`Adding chips and queso:`, addItem(`chips and queso`));
+console.log(`basket is ${basket}`);
+
+function listItems (){
+for (let item of basket){
+    console.log(item);
+    }
 }
-console.log(`Adding chips and queso`, additem(`chips and queso`));
+console.log (`items in the basket:`);
+listItems();
 
+function empty(){
+    basket.length = 0; 
+    console.log (`Basket set to 0`);
+}
+empty();
 
+const maxItems = 5;
 
+function isFull(){
+    if (basket.length < maxItems){
+        return false; 
+    }
+    else {
+        return true;
+        }
+}
+console.log()
 
 
 
